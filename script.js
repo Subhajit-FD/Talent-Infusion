@@ -26,24 +26,6 @@ function menuAnimation() {
   });
 }
 
-function page4Animation() {
-  var elemC = document.querySelector("#elem-container");
-  var fixed = document.querySelector("#fixed-image");
-  elemC.addEventListener("mouseenter", function () {
-    fixed.style.display = "block";
-  });
-  elemC.addEventListener("mouseleave", function () {
-    fixed.style.display = "none";
-  });
-
-  var elems = document.querySelectorAll(".elem");
-  elems.forEach(function (e) {
-    e.addEventListener("mouseenter", function () {
-      var image = e.getAttribute("data-image");
-      fixed.style.backgroundImage = `url(${image})`;
-    });
-  });
-}
 
 function time() {
   function getCurrentTime() {
@@ -85,6 +67,20 @@ function readMore() {
 
 document.addEventListener("DOMContentLoaded", readMore);
 
+function openPopup(card) {
+  var title = card.querySelector('h3').innerText;
+  var content = card.querySelector('p').innerText;
+  var popup = document.getElementById('popup');
+  popup.innerHTML = `<h2>${title}</h2><p>${content}</p>`;
+  popup.style.display = 'block';
+  document.querySelector('.overlay').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+  document.querySelector('.overlay').style.display = 'none';
+}
+
+
 time();
-page4Animation();
 menuAnimation();
