@@ -208,6 +208,11 @@ nav a:hover {
   box-shadow: none;
   transform: translateY(4px);
 }
+.comic-button:hover {
+  transform: translatey(10px);
+  box-shadow: none;
+  cursor: pointer;
+}
 
 @media (max-width: 600px) {
   #home {
@@ -340,11 +345,12 @@ nav a:hover {
   padding: 10px;
   margin: 10px;
   position: relative;
+  box-shadow: 5px 5px 0px #000;
   transition: all 0.3s ease;
 }
 .card:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  transform: translatey(-10px);
+  box-shadow: none;
   cursor: pointer;
 }
 
@@ -372,6 +378,7 @@ nav a:hover {
   font-size: 18px;
   font-family: "Rampart One";
 }
+
 
 @media (max-width: 768px) {
   .card {
@@ -445,6 +452,13 @@ nav a:hover {
   flex-direction: column;
   gap: 10px;
   overflow: hidden;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+}
+.elem:hover {
+  transform: translatey(-10px);
+  box-shadow: none;
+  cursor: pointer;
 }
 .w-text {
   padding: 0 1vw;
@@ -573,6 +587,11 @@ nav a:hover {
   color: var(--light);
   box-shadow: none;
   transform: translateY(4px);
+}
+.comic-button-2:hover {
+  transform: translatey(10px);
+  box-shadow: none;
+  cursor: pointer;
 }
 
 .arrange {
